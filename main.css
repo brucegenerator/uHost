@@ -8,10 +8,13 @@ body {
 }
 
 #product-overview {
-    background: url("freedom.jpg");
+    background: linear-gradient(to top, rgba(80, 68, 18, 0.6) 10%, transparent), url("./images/freedom.jpg")left 10% bottom 20%/cover no-repeat border-box, #ff1b68;
     width: 100%;
     height: 528px;
-    padding: 10px;   
+    padding: 10px;
+    margin-top: 43px;
+    position: relative;
+    /* background-image: radial-gradient(circle at top left, red, blue, green);   */
 }
 
 .section-title {
@@ -22,6 +25,18 @@ body {
 #product-overview h1 {
     color: white;
     font-family: 'Anton', sans-serif;
+    position: absolute;
+    /* top: 83%; */
+    left: 3%;
+    bottom: 5%;
+    z-index: 1;
+}
+
+.slogan {
+    position: absolute;
+    top: 83%;
+    left: 5%;
+    z-index: 1;
 }
 
 .plan__list {
@@ -76,7 +91,7 @@ body {
     padding: 0;
 }
 
-.plan__features li {
+.plan__feature {
     margin: 8px 0;
 }
 
@@ -86,7 +101,7 @@ body {
     padding: 16px;
 }
 
-#key-features > .section-title {
+#key-features .section-title {
     color: white;
     margin: 32px;
 }
@@ -103,21 +118,18 @@ body {
 
 .key-feature {
     display: inline-block;
-    color: #0e4f1f;
-    padding: 10px;
-    margin: 15px;
-    text-align: center;
-    vertical-align: top;
     width: 30%;
+    vertical-align: top;
 }
 
 .key-feature__image {
-    background-color: #ffcede;
+    background-color: rgba(255, 206, 222);
     width: 128px;
     height: 128px;
     border: 2px solid #424242;
     border-radius: 50%;
     margin: auto;
+    padding: 18px;
 }
 
 .key-feature__description {
@@ -127,3 +139,8 @@ body {
     font-weight: 20px;
 }
 
+.key-feature__image:hover,
+.key-feature__image:active {
+    background-color: rgba(255, 206, 222, 0.3);
+    border-color: white;
+}
